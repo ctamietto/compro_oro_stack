@@ -14,6 +14,7 @@ services:
         - "1003:1003"
         - "8443:8443"
         - "5173:5173"
+        - "4173:4173"
       restart: unless-stopped
       volumes:
         - "compro-oro-negozio-app-data:/config/workspace/negozio"
