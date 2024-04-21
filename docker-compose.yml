@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  vscode:
+      container_name: "compro-oro-vscode"
+      environment:
+        - PUID=1000
+        - PGID=1000
+      image: "comprooro/negozio"
+      build: "./negozio"
+      networks: 
+        compro-oro-net:
+      ports:
+        - "1003:1003"
+        - "8443:8443"
+        - "5173:5173"
+      restart: unless-stopped
+      volumes:
+        - "compro-oro-negozio-app-data:/config/workspace/negozio"
+
+
+
+volumes:
+  compro-oro-negozio-app-data:
+    name: "compro-oro-negozio-app-data"
+
+networks:
+  compro-oro-net:
+    name: "compro-oro-net"
