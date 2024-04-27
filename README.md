@@ -3,17 +3,19 @@ Compro Oro Stack
 
 per installare la stack utilizzare il comando 
 
-docker compose up -d
+./compro_oro_up.sh
 
 per rimuovere la stack 
 
-docker compose down -v
+./compro_oro_down 
 
-una volra creata la stack eseguire i seguenti comandi nel container vscode
+per avviare la stack utilizzare
 
-install_my_vscode_extensions.sh
-create_repository.sh
+./compro_oro_start.sh
 
+per stoppare la stack 
+
+./compro_oro_stop.sh
 
 
 

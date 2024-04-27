@@ -1,9 +1,0 @@
-RUN cd /config/workspace && \
-    git clone https://github.com/ctamietto/compro_oro_negozio.git negozio && \
-    chown -R 1000:1000 negozio && \
-    cd negozio && \
-    git config --global --add safe.directory /config/workspace/negozio && \
-    git config --global user.email "c.tamietto@gmail.com" && \
-    git config --global user.name "c.tamietto" && \
-    cd .. && \
-    chown -R 1000:1000 negozio 
